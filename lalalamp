@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js">
+    </script>
+    <script src="https://unpkg.com/aframe-iot-component/aframe-iot-component.js">
+    </script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="bg" src="https://live.staticflickr.com/65535/49709852201_e9f766fe52_k.jpg">
+      </a-assets>
+      <a-sky src="#bg"></a-sky>
+         <a-light type="point" color="white" position="-4 3 0" intensity="6"> </a-light>
+         <a-torus radius="1" radiusTubular="0.5" arc="360" position="0 5 -7" material="color: gray; metalness: 0.7"
+                  animation="property: rotation; to:360 360 360; loop:true; dur:4000"
+                  iot="device: 767"> </a-torus>
+         <a-cylinder radius="2" height="0.8" position="0 0 -7" material="color: black; metalness: 0.7" ></a-cylinder>
+         <a-cone radius-top="1" radius-bottom="0.5" height="0" position="0 2 -7" material="color: black; metalness: 0.7"> </a-cone>
+         <a-cone radius-top="0.3" radius-bottom="1" height="4" position="0 2 -7" material="color: black; metalness: 0.7"> </a-cone>
+         <a-sphere radius="1" position="0 5 -7" animation="property: components.material.material.color; type: color; from: red; to: #33160B; dur: 2000; loop:true; easing: linear"</a-sphere>
+
+    </a-scene>
+  </body>
+</html>
